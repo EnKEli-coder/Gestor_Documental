@@ -72,11 +72,9 @@
 
                 <label for="archivo">Subir Archivo:</label>
                 <input type="file" class="controls" name="archivo" id="archivo" accept=".pdf, .PDF" required>
-
             </div>
 
             <div class="derecha">
-
                 <label for="">Número de Caja:</label>
                 <input type="text" class="controls" name="Caja" autocomplete="off">
 
@@ -88,18 +86,9 @@
 
                 <label for="">Vigencia Documental:</label>
                 <input type="text" class="controls" placeholder=" SOLO AÑO, FORMATO DE 4 DIGITOS" name="Vigencia" autocomplete="off">
-
-                
                 </br>
-        
-                
-                
                 <button type="submit" class="botons" id="enviar" name="enviar" value="Guardar">Enviar</button>
-
-                
-                
             </div>
-        
         </form>
     </div>
 

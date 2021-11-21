@@ -2,10 +2,12 @@
 
 
 class usuarios{
+
+   
+
     public static function login($_user, $_password) {
         include_once 'conexion.php';
-
-        $query = $mysqli->prepare("SELECT user, pswd  FROM user WHERE user = ? and pswd = ?");
+        $query = $mysqli->prepare("SELECT id, user, pswd, rango FROM user WHERE user = ? and pswd = ?");
         $query->bind_param("ss",$_user,$_password); 
         $query->execute();
         $usuario = $query->get_result();
@@ -15,7 +17,7 @@ class usuarios{
             // initialize session variables
             session_start();
            // $_SESSION['loggedDataTime']   = datatime();
-            $_SESSION['loggedUserName'] = $filasql['user'] ;
+            $_SESSION['loggedUserName'] = $filasql['id'] ;
         }
 
         $acceso = false;

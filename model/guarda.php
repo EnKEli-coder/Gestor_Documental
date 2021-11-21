@@ -11,12 +11,13 @@
     $Caja =$_POST['Caja'];
     $Expediente=$_POST['Expediente'];
     $Vigencia=$_POST['Vigencia'];
-    $archivo = implode('', $_FILES['archivo']);
+    $archivo = $_FILES['archivo']["name"];
+    //$archivo = implode('', $_FILES['archivo']["name"]);
     $Fojas = $_POST['Fojas'];
    
     
 
-    $sql = "INSERT INTO datos (idCategorias, idSubcategorias, idSeries, idSubseries, Caja, Expediente, Vigencia, archivo, Fojas)    
+    $sql = "INSERT INTO datos (idCategorias, idSubcategorias, idSeries, idSubseries, Caja, Expediente, Fojas, Vigencia, archivo)    
     VALUES ('$idCategorias', '$idSubcategorias', '$idSeries', '$idSubseries', '$Caja', '$Expediente', '$Fojas' , '$Vigencia', '$archivo')";
     $resultado = $mysqli->query($sql);
 

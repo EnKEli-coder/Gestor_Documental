@@ -7,7 +7,7 @@
         //echo '<br> LoginOk = ';
         print_r($loginok);
         if ($loginok){
-        header("location: ../index.php?menu=inicio");
+        header("location: ../index.php?menu=tabla");
         } else{
             echo "<script>
             alert('Usuario No Existe o Password Incorrecto');
